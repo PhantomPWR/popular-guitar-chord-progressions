@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guitar chord diagrams for 9 popular chord progressions">
+    <meta name="keywords" content="guitar chords, chord progressions, circle of fifths, music theory">
+
+    <!-- Site Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/site-icon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/site-icon-16x16.webp">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Chord Progression Pocket Guide</title>
+</head>
+<body>
+
+    <main>
+
+        <!-- Site Header -->
+        <header class="site-header flex-container">
+            <h1 class="site-title uppercase">Chord Progressions <span>Pocket Guide For Guitar</span></h1>
+        </header>
+
+        <!-- Control Area -->
+        <section id="controls" class="control-area flex-container">
+
+            <!-- Key Select Outer Container -->
+            <div class="key-select-outer-container flex-container flex-column">
+                <h2  class="uppercase section-heading"><span class="step">Step 1:</span><span>Select a key</span></h2>
+
+                <!-- Key Selection Background (Circle of Fifths) -->
+                <div id="circleOfFifthsContainer" class="circle-of-fifths-container flex-container">
+
+                    <!-- Key Selection Buttons -->
+                    <div id="keySelectContainer" class="key-select-inner flex-container">
+
+                        <!-- Major Keys Select -->
+                        <div class="major-keys keys flex-container">
+
+                            <!-- Button Group 1 -->
+                            <div class="button-group major flex-container">    
+                                <button aria-label="E♭ Major"  type="button" data-key-select="eFlatMaj" data-key-tonality="maj" class="key-select">E♭ Major</button>
+                                <button aria-label="A Major"  type="button" data-key-select="aMaj" data-key-tonality="maj" class="key-select">A Major</button>
+                            </div>
+
+                            <!-- Button Group 2 -->
+                            <div class="button-group major flex-container">
+                                <button aria-label="A♭ Major"  type="button" data-key-select="aFlatMaj" data-key-tonality="maj" class="key-select">A♭ Major</button>
+                                <button aria-label="D Major"  type="button" data-key-select="dMaj" data-key-tonality="maj" class="key-select">D Major</button>
+                            </div>
+
+                            <!-- Button Group 3 -->
+                            <div class="button-group major flex-container">
+                                <div class="double-btn d-flat-c-sharp">
+                                    <button aria-label="D♭ Major"  type="button" data-key-select="dFlatMaj" data-key-tonality="maj" class="key-select">D♭ Major</button>
+                                    <button aria-label="C♯ Major"  type="button" data-key-select="cSharpMaj" data-key-tonality="maj" class="key-select">C♯ Major</button>
+                                </div>
+                                <button aria-label="G Major"  type="button" data-key-select="gMaj" data-key-tonality="maj" class="key-select adjust-alignment">G Major</button>
+                            </div>
+
+                            <!-- Button Group 4 -->
+                            <div class="button-group major flex-container">
+                                <div class="double-btn g-flat-f-sharp">
+                                    <button aria-label="G♭ Major"  type="button" data-key-select="gFlatMaj" data-key-tonality="maj" class="key-select">G♭ Major</button>
+                                    <button aria-label="F♯ Major"  type="button" data-key-select="fSharpMaj" data-key-tonality="maj" class="key-select">F♯ Major</button>
+                                </div>
+                                <button aria-label="C Major"  type="button" data-key-select="cMaj" data-key-tonality="maj" class="key-select adjust-alignment">C Major</button>
+                            </div>
+
+                            <!-- Button Group 5 -->
+                            <div class="button-group major flex-container">
+                                <button aria-label="B Major"  type="button" data-key-select="bMaj" data-key-tonality="maj" class="key-select">B Major</button>
+                                <button aria-label="F Major"  type="button" data-key-select="fMaj" data-key-tonality="maj" class="key-select">F Major</button>
+                            </div>
+
+                            <!-- Button Group 6 -->
+                            <div class="button-group major flex-container">
+                                <button aria-label="E Major"  type="button" data-key-select="eMaj" data-key-tonality="maj" class="key-select">E Major</button>
+                                <button aria-label="B♭ Major"  type="button" data-key-select="bFlatMaj" data-key-tonality="maj" class="key-select">B♭ Major</button>
+                            </div>
+
+                        </div>
+
+                        <!-- Minor Keys Select -->
+                        <div class="minor-keys keys flex-container">
+
+                            <!-- Button Group 1 -->
+                            <div class="button-group minor flex-container">
+                                <button aria-label="C minor"  type="button" data-key-select="cMin" data-key-tonality="min" class="key-select">C minor</button>
+                                <button aria-label="F♯ minor"  type="button" data-key-select="fSharpMin" data-key-tonality="min" class="key-select">F♯ minor</button>
+                            </div>
+
+                            <!-- Button Group 2 -->
+                            <div class="button-group minor flex-container">
+                                <button aria-label="F minor"  type="button" data-key-select="fMin" data-key-tonality="min" class="key-select">F minor</button>
+                                <button aria-label="B minor"  type="button" data-key-select="bMin" data-key-tonality="min" class="key-select">B minor</button>
+                            </div>
+
+                            <!-- Button Group 3 -->
+                            <div class="button-group minor flex-container">
+                                <button aria-label="B♭ minor"  type="button" data-key-select="bFlatMin" data-key-tonality="min" class="key-select">B♭ minor</button>
+                                <button aria-label="E minor"  type="button" data-key-select="eMin" data-key-tonality="min" class="key-select">E minor</button>
+                            </div>
+
+                            <!-- Button Group 4 -->
+                            <div class="button-group minor flex-container">
+                                <button aria-label="E♭ minor"  type="button" data-key-select="eFlatMin" data-key-tonality="min" class="key-select">E♭ minor</button>
+                                <button aria-label="A minor"  type="button" data-key-select="aMin" data-key-tonality="min" class="key-select">A minor</button>
+                            </div>
+
+                            <!-- Button Group 5 -->
+                            <div class="button-group minor flex-container">
+                                <button aria-label="G♯ minor"  type="button" data-key-select="gSharpMin" data-key-tonality="min" class="key-select">G♯ minor</button>
+                                <button aria-label="D minor"  type="button" data-key-select="dMin" data-key-tonality="min" class="key-select">D minor</button>
+                            </div>
+
+                            <!-- Button Group 6 -->
+                            <div class="button-group minor flex-container">
+                                <button aria-label="C♯ minor"  type="button" data-key-select="cSharpMin" data-key-tonality="min" class="key-select">C♯ minor</button>
+                                <button aria-label="G minor"  type="button" data-key-select="gMin" data-key-tonality="min" class="key-select">G minor</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Chord Progression Select -->
+            <div class="chord-progression-container">
+                <div class="chord-progression-inner">
+                    <div id="chordProgressionSelect" class="chord-progression-select">
+                        <h2  class="uppercase section-heading"><span class="step">Step 2:</span><span>Select a chord progression</span></h2>
+
+                        <div class="button-container flex-container flex-column">
+                            <div class="button-row flex-container">
+                                <button aria-label="I V IV I"  data-chord-progression-select="oneFiveFourOne" class="chord-progression">I V IV I</button>
+                                <button aria-label="I V vi V"  data-chord-progression-select="oneFiveMinorSixFive" class="chord-progression">I V vi V</button>
+                                <button aria-label="I vi IV V"  data-chord-progression-select="oneMinorSixFourFive" class="chord-progression">I vi IV V</button>
+                            </div>
+                            <div class="button-row flex-container">
+                                <button aria-label="I vi ii V"  data-chord-progression-select="oneMinorSixMinorTwoFive" class="chord-progression">I vi ii V</button>
+                                <button aria-label="I iii vi V"  data-chord-progression-select="oneMinorThreeMinorSixFive" class="chord-progression">I iii vi V</button>
+                                <button aria-label="vi IV I V"  data-chord-progression-select="minorSixFourOneFive" class="chord-progression">vi IV I V</button>
+                            </div>
+                            <div class="button-row flex-container">
+                                <button aria-label="I ♭VII IV I"  data-chord-progression-select="oneFlatSevenFourOne" class="chord-progression">I ♭VII IV I</button>
+                                <button aria-label="I ♭VII ♭VI V"  data-chord-progression-select="oneFlatSevenFlatSixFive" class="chord-progression">I ♭VII ♭VI V</button>
+                                <button aria-label="i ♭VII ♭VI ♭VII"  data-chord-progression-select="minorOneFlatSevenFlatSixFlatSeven" class="chord-progression">i ♭VII ♭VI ♭VII</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Control Area End -->
+
+        <!-- Display Area -->
+        <section id="display" class="display-area flex-container flex-column">
+
+            <!-- Display Select Key & Chord Progression -->
+            <div id="selectionDisplay" class="selection-display flex-container flex-column">
+                <h3 class="selection-heading uppercase">Your Selection</h3>
+                <div class="selection-container flex-container">
+                    <div class="selected-key flex-container">
+                        <span class="selection-key-label uppercase">Key: </span>
+                        <span id="selectedKeyDisplay" class="selected-display-text ghosted"></span>
+                    </div>
+                    <div class="selected-chord-progression flex-container">
+                        <span class="selection-chord-progression-label uppercase">Chord Progression: </span>
+                        <span id="selectedChordProgressionDisplay" data-selected-chord-display="" class="selected-display-text ghosted"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chord Box Diagram Container -->
+            <div id="chordBoxContainer" class="chord-box-container flex-container flex-column">
+
+                <!-- Chord Box Diagram Row 1 -->
+                <div class="chord-box-row flex-container">
+
+                    <!-- Chord Box Diagram 1 - Start -->
+                    <figure id="chordBox1" class="chord-box flex-container flex-column">
+
+                        <!-- Chord Info -->
+                        <span data-label-degree="labelDegree1" class="chord-info label-degree">-</span>
+                        <span data-label-chord="labelChord1" class="chord-info label-chord">-</span>
+
+                        <!-- Fretboard - Start -->
+                        <div class="fretboard">
+                            <span class="fret-number">FRET</span>
+                            <img data-chord-diagram="chordDiagram1" src="assets/images/chord-diagrams/chord-diagram-blank.webp" alt="guitar chord diagram" height="220" width="220">
+                        </div>
+                        <!-- Fretboard - End -->
+                        
+                    </figure>
+                    <!-- Chord Box Diagram 1 - End -->
+
+                    <!-- Chord Box Diagram 2 - Start -->
+                    <figure id="chordBox2" class="chord-box flex-container flex-column">
+
+                        <!-- Chord Info -->
+                        <span data-label-degree="labelDegree2" class="chord-info label-degree">-</span>
+                        <span data-label-chord="labelChord2" class="chord-info label-chord">-</span>
+
+                        <!-- Fretboard - Start -->
+                        <div class="fretboard">
+                            <span class="fret-number">FRET</span>
+                            <img data-chord-diagram="chordDiagram2" src="assets/images/chord-diagrams/chord-diagram-blank.webp" alt="guitar chord diagram" height="220" width="220">
+                        </div>
+                        <!-- Fretboard - End -->
+
+                    </figure>
+                    <!-- Chord Box Diagram 2 - End -->
+
+                </div>
+
+                <!-- Chord Box Diagram Row 2 -->
+                <div class="chord-box-row flex-container">
+
+                    <!-- Chord Box Diagram 3 - Start -->
+                    <figure id="chordBox3" class="chord-box flex-container flex-column">
+
+                        <!-- Chord Info -->
+                        <span data-label-degree="labelDegree3" class="chord-info label-degree">-</span>
+                        <span data-label-chord="labelChord3" class="chord-info label-chord">-</span>
+
+                        <!-- Fretboard - Start -->
+                        <div class="fretboard">
+                            <span class="fret-number">FRET</span>
+                            <img data-chord-diagram="chordDiagram3" src="assets/images/chord-diagrams/chord-diagram-blank.webp" alt="guitar chord diagram" height="220" width="220">
+                        </div>
+                        <!-- Fretboard - End -->
+
+                    </figure>
+                    <!-- Chord Box Diagram 3 - End -->
+
+                    <!-- Chord Box Diagram 4 - Start -->
+                    <figure id="chordBox4" class="chord-box flex-container flex-column">
+
+                        <!-- Chord Info -->
+                        <span data-label-degree="labelDegree4" class="chord-info label-degree">-</span>
+                        <span data-label-chord="labelChord1" class="chord-info label-chord">-</span>
+
+                        <!-- Fretboard - Start -->
+                        <div class="fretboard">
+                            <span class="fret-number">FRET</span>
+                            <img data-chord-diagram="chordDiagram4" src="assets/images/chord-diagrams/chord-diagram-blank.webp" alt="guitar chord diagram" height="220" width="220">
+                        </div>
+                        <!-- Fretboard - End -->
+
+                    </figure>
+                    <!-- Chord Box Diagram 4 - End -->
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Display Area - End -->
+
+    </main>
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/7f8e3489c9.js" crossorigin="anonymous"></script>
+    <!-- Main Javascript File -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

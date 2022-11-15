@@ -1,0 +1,725 @@
+/* TABLE OF CONTENTS
+   -----------------
+
+RESET
+
+UTILITIES
+   - Hover & Active States
+
+TYPOGRAPHY & COLOURS
+
+DECORATION
+   - Buttons
+   - Chord Boxes
+
+SITE STRUCTURE
+    - Control Area
+    - Display Area
+
+MEDIA QUERIES
+    - Desktops
+    - Laptops
+    - Tablet (Landscape)
+    - Tablet (Portrait)
+    - Phone Large (Landscape)
+    - Phone Small (Landscape)
+    - Phone (Portrait)
+    - Phone X-Small (Portrait)
+    - Phone X-Small (Landscape)
+   -----------------
+ */
+
+/* -- RESET -- */
+html {
+    font-size: 62.5%; /* Sets font size to 10px so 1 rem = 10px */
+    }
+
+body {
+    font-size: 1.6rem; /* Resets the normal font size for everything to 16px so it's readable. */
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box; /* Include element border in dimension calculations */
+}
+
+
+/* -- UTILITIES -- */
+
+/* Hover & Active States */
+button:hover,
+button.active {
+    border-color: #e67e22;
+    color: initial;
+}
+
+button:hover,
+button.active {
+    background-color: #e9bc96;
+}
+
+button:disabled,
+button:disabled:hover {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: initial;
+}
+
+.key-select:hover,
+.key-select.active {
+    background-color: rgba(230 126 34/55%);
+    color: transparent;
+}
+
+/* FX */
+button,
+button:hover,
+.chord-box-container,
+.chord-box-container.expanded {
+    transition: 300ms all ease-in-out;
+}
+
+
+/* -- TYPOGRAPHY & COLOURS -- */
+body,
+button {
+    color: #2c3e50;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.selection-key-label,
+.selection-chord-progression-label {
+    font-family: "Orbitron", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+button {
+    font-weight: 600;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.site-header {
+    background-color: #2c3e50;
+    border-bottom: 2px solid #2c3e50;
+    color: #ecf0f1;
+}
+
+.site-title {
+    font-style: italic;
+    line-height: 2rem;
+    letter-spacing: 0.1em;
+    word-spacing: 0.1em;
+}
+
+.site-title span {
+    font-size: 1.6rem;
+    word-spacing: 0;
+    font-weight: 700;
+}
+
+main,
+.key-select-outer-container,
+.chord-progression-inner {
+    background-color: #2c3e50;
+    border: 2px solid #2c3e50;
+    border-radius: 3px;
+}
+
+main {
+    background-color: #D9DCDD;
+}
+
+.key-select {
+    background-color: transparent;
+    color: #ecf0f1;
+    text-indent: -9999em;
+}
+
+.control-area {
+    background-color: #d9dcdd;
+}
+
+.section-heading {
+    background-color: #2C3E50;
+    color: #ecf0f1;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.chord-progression-select button {
+    letter-spacing: 0;
+    word-spacing: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.display-area {
+    background-color: #ecf0f1;
+}
+
+.selection-display,
+.selection-heading {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-weight: normal;
+}
+
+.selected-key,
+.selected-chord-progression {
+    line-height: 1;
+}
+
+.selection-heading {
+    text-align: center;
+}
+
+.selected-display-text {
+    color: #e67e22;
+    font-weight: bold;
+}
+
+.ghosted {
+    color: #95a5a6;
+}
+
+.label-degree,
+.label-chord,
+.fretboard {
+    font-size: 2rem;
+}
+
+.label-degree {
+    font-size: 2rem;
+}
+
+.label-chord {
+    font-size: 3rem;
+}
+
+.label-degree::before,
+.label-chord::before,
+.fretboard::before,
+.fret-number {
+    color: #34495e;
+    font-size: 12px;
+}
+
+
+/* -- DECORATION -- */
+
+.selection-heading {
+    border-bottom: 1px solid #95a5a6;
+}
+
+
+/* Buttons */
+
+button {
+    appearance: none;
+    border: 2px solid;
+    border-radius: 3px;
+}
+
+.key-select {
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.label-degree::before,
+.label-chord::before,
+.fretboard::before,
+.fret-number {
+    border-bottom: 1px solid #D9DCDD;
+}
+
+
+/* -- SITE STRUCTURE -- */
+
+.flex-container {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+main {
+    margin: 1em auto;
+    overflow-x: hidden;
+    position: relative;
+    width: 960px;
+}
+
+.site-header {
+    justify-content: space-between;
+}
+
+.control-area,
+.display-area {
+    padding: 3em 0;
+}
+
+.display-area {
+    padding-top: 0;
+}
+
+/* Control Area */
+.control-area {
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.key-select-outer-container,
+.chord-progression-inner {
+    height: 412px;
+}
+
+.key-select-outer-container {
+    padding: 0 1em 1em;
+}
+
+.section-heading {
+    margin: 0 0 1em;
+    padding: 0.5em 0;
+}
+
+.section-heading span {
+    display: block;
+}
+
+.section-heading span:nth-child(2) {
+    margin-top: 0.5em;
+}
+
+
+/* Circle of Fifths - Key Selection Buttons */
+
+.circle-of-fifths-container,
+.key-select-inner {
+    height: 320px;
+    width: 320px;
+    position: relative;
+}
+
+.circle-of-fifths-container {
+    background: url(../../assets/images/circle-of-fifths-key-select.webp) no-repeat scroll 0/cover;
+}
+
+.key-select-inner {
+    align-items: center;
+    justify-content: center;
+}
+
+.keys {
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+.major-keys {
+    width: 310px;
+}
+
+.minor-keys {
+    width: 210px;
+}
+
+.button-group:nth-of-type(1) {
+    transform: rotate(0deg);
+}
+
+.button-group:nth-of-type(2) {
+    transform: rotate(-30deg);
+}
+
+.button-group:nth-of-type(3) {
+    transform: rotate(-60deg);
+}
+
+.button-group:nth-of-type(4) {
+    transform: rotate(-90deg);
+}
+
+.button-group:nth-of-type(5) {
+    transform: rotate(-120deg);
+}
+
+.button-group:nth-of-type(6) {
+    transform: rotate(-150deg);
+}
+
+.button-group {
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+}
+
+.key-select {
+    height: 40px;
+    width: 40px;
+}
+
+.double-btn {
+    position: relative;
+    height: 60px;
+    width: 40px;
+}
+
+.double-btn .key-select {
+    position: absolute;
+    height: 30px;
+    width: 40px;
+    z-index: 1;
+    border-radius: 0 0 50px 50px;
+}
+
+.double-btn.d-flat-c-sharp .key-select:first-child {
+    top: -2px;
+    right: -3px;
+    transform: rotate(190deg);
+}
+
+.double-btn.d-flat-c-sharp .key-select:last-child {
+    bottom: -3px;
+    right: 2px;
+    transform: rotate(10deg);
+}
+
+.double-btn.g-flat-f-sharp .key-select:first-child {
+    top: 0;
+    right: -8px;
+    transform: rotate(220deg);
+}
+
+.double-btn.g-flat-f-sharp .key-select:last-child {
+    bottom: 1px;
+    transform: rotate(40deg);
+    right: 6px;
+}
+
+.adjust-alignment {
+    position: relative;
+    top: 10px;
+}
+
+.site-title {
+    margin: 0;
+    padding: 1em;
+}
+
+.site-title span {
+    display: block;
+    margin-top: 0.5em;
+}
+
+.chord-progression-container {
+    width: 450px;
+}
+
+.chord-progression-select .button-container {
+    height: 320px;
+    justify-content: space-evenly;
+}
+
+.chord-progression-select .button-row {
+    justify-content: space-evenly;
+}
+
+.chord-progression-select .button-row:not(:first-child) {
+    margin: 1rem 0;
+}
+
+.chord-progression-select .button-row:first-child {
+    margin-bottom: 1rem;
+}
+
+.chord-progression-select button {
+    padding: 1em 0.5em;
+    height: 90px;
+    width: 30%;
+}
+
+
+
+/* Display Area */
+.display-area,
+.selection-display {
+    justify-content: space-evenly;
+}
+
+.selection-display {
+    padding: 1rem;
+}
+
+.selection-heading {
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.selection-container {
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+
+.selected-key,
+.selected-chord-progression {
+    align-items: center;
+}
+
+.selected-key span,
+.selected-chord-progression span {
+    height: 20px;
+}
+
+.selected-key span:last-child,
+.selected-chord-progression span:last-child {
+    margin-left: 1rem;
+}
+
+.label-degree,
+.label-chord,
+.fretboard {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.label-chord {
+    margin: 0.5em 0;
+    position: relative;
+}
+
+.label-degree::before,
+.label-chord::before,
+.fretboard::before,
+.fret-number {
+    content: "";
+    position: absolute;
+    text-align: left;
+    width: 100%;
+}
+
+.label-degree::before,
+.label-chord::before {
+    bottom: 0;
+}
+
+.label-degree::before {
+    content: "DEGREE";
+}
+
+.label-chord::before {
+    content: "CHORD";
+}
+
+.fretboard::before {
+    content: "STRINGS";
+    top: 8px;
+}
+
+.fret-number {
+    top: 44px;
+    width: 100px;
+    left: 0;
+}
+
+.chord-box-container {
+    height: 0;
+    overflow: hidden;
+}
+
+.chord-box-container.expanded {
+    height: auto;
+    overflow: auto;
+}
+
+.chord-box-row {
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+figure {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2em;
+    width: 40%;
+}
+
+
+/* -- Media Queries -- */
+
+/* Phone (Landscape) */
+@media (max-width: 812px)
+   and (orientation: landscape) {
+
+    main {
+        margin: 0;
+    }
+    
+    .chord-progression-container {
+        width: 410px;
+    }
+
+    .chord-progression-select button {
+        width: 33%;
+    }
+
+    .fret-number {
+        width: 70px;
+    }
+
+}
+
+/* Phone (Portrait) */
+@media (max-width: 414px) {
+
+    main {
+        width: 100%;
+    }
+    
+    .site-title {
+        font-size: 2.4rem;
+        line-height: 1.1;
+        padding-top: 1.6em;
+    }
+
+    .site-title span {
+        display: block;
+    }
+
+    .control-area,
+    .display-area {
+        padding: 1em 0;
+    }
+
+    .control-area {
+        flex-direction: column;
+    }
+    
+    .selection-container {
+        flex-direction: column;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+    }
+
+    .chord-progression-container {
+        margin-top: 2em;
+        width: 360px;
+    }
+
+    .chord-progression-inner {
+        height: auto;
+    }
+
+    .chord-progression-select .button-container {
+        height: auto;
+    }
+
+    .chord-progression-select button {
+        font-size: 1.1rem;
+        height: 60px;
+        width: 33%;
+    }
+
+    .selected-chord-progression {
+        align-items: flex-end;
+        margin-top: 0.5em;
+    }
+
+    .selected-key span,
+    .selected-chord-progression span {
+        height: auto;
+        width: 50%;
+    }
+
+    .chord-box-container figure {
+        margin-top: 2em;
+        width: 90%;
+    }
+
+    .chord-box-row {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .fret-number {
+        width: 80px;
+    }
+    
+}
+
+
+/* Phone X-Small (Portrait) */
+@media (max-width: 915px)
+   and (orientation: portrait) {
+
+    .site-header {
+        text-align: center;
+    }
+
+    .circle-of-fifths-container,
+    .key-select-inner {
+        height: 300px;
+        width: 300px;
+    }
+
+    .button-group {
+        left: 10px;
+        max-width: 290px;
+    }
+
+    .minor-keys {
+        width: 200px;
+    }
+
+    .minor-keys .button-group {
+        left: 0;
+    }
+
+    .chord-progression-container {
+        width: 300px;
+    }
+
+    .selected-key span,
+    .selected-chord-progression span {
+        width: 54%;
+    }
+
+}
+
+/* Phone X-Small (Landscape) */
+@media (max-width: 915px)
+   and (orientation: landscape) {
+
+    main {
+        max-width: 100%;
+    }
+}

@@ -1,108 +1,233 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Chord Progressions - Pocket Guide For Guitar
 
-Welcome USER_NAME,
+## Diploma in Full Stack Software Development - Portfolio Project 2
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Mockup](assets/readme/device-mockup.webp)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+[The live project can be viewed here.](https://phantompwr.github.io/pp2-chord-progression-pocket-guide/) 
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The website allows the user to choose keys and chord progressions, in order to determine which chords to play.
 
-`python3 -m http.server`
+The user select a key, and then a chord progression. The application will then load the relevant chord diagrams.
 
-A blue button should appear to click: _Make Public_,
+As an example:
 
-Another blue button should appear to click: _Open Browser_.
+1. Select the key of C Major
+2. Select the chord progression I V IV I
+3. Diagrams for the chords Cmaj, Gmaj, Fmaj and Cmaj are displayed
+4. Any combination of keys and chord progressions can be selected, which allows the user to play the same progression in different keys and vice versa
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The goals of the website are:
+* To generate traffic, which in turn will generate AdSense revenue.
 
-A blue button should appear to click: _Make Public_,
+The user visits this website to have a songwriting and practicing aid, without the need for pen and paper.
 
-Another blue button should appear to click: _Open Browser_.
+# UX
+The design of the site is intentionally simple and to the point. In future, the aim is to add sound samples, so the user can hear what any selected combination will sound like.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Ideal clients 
+The ideal clients for this business are: 
+* Guitarists
+* Songwriters
+* Music hobbyists
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### User stories: 
+1.	As a visitor, I am in the process of writing a song. Using pen and paper to work out which chords to play in a particular chord progression and key, quickly becomes tedious when I want to try out my idea in a different key.
+2.	As a visitor, I want to practice chords in different keys, but struggle to keep track of where I am when having to page back and forth in a chord book.
 
-------
 
-## Release History
+### Scope
+To help the visitor, the site includes: 
+* All 24 keys in the Circle of Fifths
+* 9 of the most popular chord progressions used in popular music
+* Scale degree, chord name and fingering for each chord in the chosen chord progression
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Skeleton 
+The website consists of a single page containing all the required elements in the interface.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Original Wireframe Concepts: 
+* ![Desktop Mock-up](assets/readme/Desktop.webp)
+* ![Tablet Mock-up](assets/readme/Tablet.webp)
+* ![Phone Mock-up](assets/readme/Phone.webp)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+# Features 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Existing Features 
+1. Select any key in the Circle of Fifths
+2. Select any of the nine chord progressions
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Features to Implement in future
+The following features can be added, to aid generating additional traffic and increase the opportunities for AdSense revenue
+* Add the ability to hear what the selections sound like
+* Add the ability to choose between guitar and keyboard
+* Create additional songwriting/practice tools
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+# Technologies Used
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### **HTML5**
+* For page markup.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### **CSS3**
+* For visual presentation and interactive feedback.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### **JavaScript**
+* For DOM manipulation and functional logic.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### **Font Awesome**
+* An icon library.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### **Google Fonts**
+* For serving custom fonts.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### **GitHub**
+* Hosting the site repository.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### **GitHub Pages**
+* Hosting the live site.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### **Git**
+* For version control.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### **Gitpod**
+* Online, cross-device IDE.
 
-------
+### **Balsamiq**
+* Wireframing application.
 
-## FAQ about the uptime script
+### **Affinity Designer**
+* Graphic editor for creating the various images & diagrams.
 
-**Why have you added this script?**
+### **Affinity Photo**
+* Photo editor for manipulating the 404 page background image.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### **Cloudconvert.com**
+* Converting images to .webp format
 
-**How will this affect me?**
+### **Tinypng.com**
+* Image compression & optimisation
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+<br>
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+# Testing 
+## Testing against client stories from UX section of this document
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Step 1
+1. When the user lands on the page, Step 1: Select a Key and the Circle of Fifths has the main focus
+2. The chord progression buttons are disabled and faded out, to turn focus to the key selection
+3. The chord display area is also hidden at this stage
+4. The selected key is highlighted
 
-**So….?**
+### Step 2
+1. Once a key has been selected, the chord progression buttons become active and can be selected
+2. The display area becomes visible, with "blank" chord diagrams
+3. Once a chord progression has been selected, the display area is fully populated
+4. From here on, the visitor can mix and match as they please
+    
+## Code validation 
+I used the [W3C CSS validation](https://jigsaw.w3.org/css-validator/#validate_by_uri), [W3C Markup Validation](https://validator.w3.org/#validate_by_uri) and [JSHint](https://jshint.com/) validators to check the web application code.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+**W3C Markup Validation**
 
-**Can I opt out?**
+![HTML Validation](assets/readme/html-validator-pass.webp)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+**W3C CSS Validation**
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+![CSS Validation](assets/readme/css-validator-pass.webp)
 
-**Anything more?**
+**JSHint Validation**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+![JSHint Results](assets/readme/js-hint-pass.webp)
 
----
 
-Happy coding!
+## Colour Contrast 
+I used the [Wave Color Contrast Accessibility Validator](https://wave.webaim.org/) for testing the colour contrasts.
+
+### Index Page
+![Index Colour Contrast Pass](assets/readme/index-wave-color-contrast-pass.webp)
+
+### 404 Page
+![404 Colour Contrast Pass](assets/readme/404-wave-color-contrast-pass.webp) 
+
+## Lighthouse Testing
+- Lighthouse testing in Chrome returned 100% scores.
+
+### Index Page
+![Index Page Lighthouse Score](assets/readme/index-lighthouse-pass.webp)
+
+### 404 Page
+![404 Page Lighthouse Score](assets/readme/index-lighthouse-pass.webp)
+
+## COMPATIBILITY
+I tested the web application in desktop and mobile configurations on the following browsers:
+
+* Chrome
+* Firefox
+* Safari
+* Edge
+
+# Deployment
+
+The project has been deployed on GitHub Pages. As my development environment I used Gitpod, from where I committed all changes to the Git version control system.
+
+**To save changes, used the following commands:**
+1. [cmd]+s to save changes
+2. `git add .` - to add all changes to the queue
+3. `git commit -m "commit message"` - to commit changes
+4. `git push` - to push changes to the remote main repository
+
+<br>
+
+**To deploy the project onto GitHub Pages, I did the following:**
+
+1. Log into GitHub and click on the relevant repository ([pp2-chord-progression-pocket-guide](https://github.com/PhantomPWR/pp2-chord-progression-pocket-guide/))
+2. Click on `Settings`
+3. On the left, find and click on Pages
+4. Leave `Source` as is
+5. Under `Branch`, select `main`
+6. click `save`
+7. After an automatic page refresh the message will read: 
+>  Your site is live at https://github.com/PhantomPWR/pp2-chord-progression-pocket-guide/
+<br>
+
+**To run a local instance:**
+
+1. Log into GitHub and click on the repository to be downloaded ([pp2-chord-progression-pocket-guide](https://github.com/PhantomPWR/pp2-chord-progression-pocket-guide/))
+2. Select `Code` and click on `Download ZIP`
+3. After downloading, you can extract the file and use it in your local environment
+
+Alternatively you can [Clone](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+or [Fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+this repository ([pp2-chord-progression-pocket-guide](https://github.com/PhantomPWR/pp2-chord-progression-pocket-guide/)) into your github account.
+
+<br>
+
+# Credits
+
+## Content References
+For the music theory, chords and chord progressions, I used the following references:
+
+* [Chord Progression Wiki](https://en.wikipedia.org/wiki/Chord_progression)
+* [Music Industry How To](https://www.musicindustryhowto.com/piano-chord-progressions/)
+* [Miguitarra Electrica](https://miguitarraelectrica.com/)
+* [Theory and Sound](https://theoryandsound.com/)
+
+## Images & Diagrams 
+* 404 Page Background - [Pexels - Daniel Jensen](https://unsplash.com/@dallehj)
+* Circle of Fifths image - Myself
+* Chord Diagram Images - Myself
+
+## Code 
+* [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [w3schools.com](https://www.w3schools.com)
+* [bobbyhadz Blog](https://bobbyhadz.com/)
+* This ReadMe document is based on a template from [saranamdarian](https://github.com/TNamdarian/saranamdarian)
+
+
+<br>
+
+# Acknowledgement 
+* Thanks to [Pieter K de Villiers](https://github.com/pieterkdevilliers) for his patience, suggestions and helping me ward off scope creep.
+* My mentor, [Adegbenga Adeye](https://github.com/deye9) who guided me throughout this project.
