@@ -1,1 +1,9 @@
-{}
+{
+    "name": "phantompwr/popular-guitar-chord-progressions-main",
+    "autoload": {
+        "psr-4": {
+            "PhantomPWR\\PopularGuitarChordProgressions\\": "src/"
+        }
+    },
+    "require": {}
+}
