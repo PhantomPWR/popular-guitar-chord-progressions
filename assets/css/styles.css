@@ -152,8 +152,9 @@ main {
 
 .key-select {
     background-color: transparent;
-    color: #ecf0f1;
-    text-indent: -9999em;
+    color: transparent;
+    /* color: #ecf0f1; */
+    /* text-indent: -9999em; */
 }
 
 .control-area {
