@@ -1,6 +1,5 @@
 # Chord Progressions - Pocket Guide For Guitar
 
-## Diploma in Full Stack Software Development - Portfolio Project 2
 
 ![Mockup](assets/readme/device-mockup.webp)
 
